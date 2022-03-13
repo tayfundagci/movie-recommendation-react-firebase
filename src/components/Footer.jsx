@@ -9,7 +9,7 @@ function Footer() {
   const colorr = theme === "light" ? "rgb(50, 50, 50)" : "rgb(190,190,190)";
   return (
     <div className="footer">
-      <p>
+      <p className="footer2">
         <span
           style={{
             textAlign: "center",

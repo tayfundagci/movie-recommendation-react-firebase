@@ -33,12 +33,12 @@
 }
 
 .footer {
+  clear: both;
   position: fixed;
-  left: 0;
   bottom: 0;
-  margin-bottom: -10px;
-  width: 100%;
-  text-align: center;
+  right: 0;
+  margin-bottom: -7px;
+  margin-right: 10px;
 }
 
 @media only screen and (max-width: 800px) {

@@ -67,7 +67,7 @@ function List() {
                   style={{ color: colorr }}
                 >
                   {movie.data.name}
-                  {/* {JSON.parse(localStorage.getItem("name")) === movie.id && (
+                  {JSON.parse(localStorage.getItem("name")) === movie.id && (
                     <button
                       onClick={() => deleteMovie(movie.id)}
                       style={{
@@ -78,7 +78,7 @@ function List() {
                     >
                       X
                     </button>
-                  )} */}
+                  )}
                 </h5>
 
                 <Link

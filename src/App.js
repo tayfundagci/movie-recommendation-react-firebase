@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import List from "./components/List";
+import AddMovie from "./components/AddMovie";
+import MovieDetail from "./components/MovieDetail";
+import { useTheme } from "./context/ThemeContext";
+import { useEffect } from "react";
+import Footer from "./components/Footer";
 
 function App() {
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`body ${theme}`}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <List />
+          </Route>
+          <Route path="/AddMovie">
+            <AddMovie />
+          </Route>
+          <Route path="/movie/:movie_id">
+            <MovieDetail />
+          </Route>
+        </Switch>
+      </Router>
+      <Footer />
     </div>
   );
 }

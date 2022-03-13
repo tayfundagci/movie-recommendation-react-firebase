@@ -46,7 +46,7 @@ export default function AddMovie() {
           <br />
           <input
             className="mt-2 ps-2"
-            placeholder="Movie Image"
+            placeholder="Movie Image (URL)"
             id="img"
             type="text"
             value={img}

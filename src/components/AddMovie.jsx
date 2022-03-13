@@ -7,18 +7,18 @@ export default function AddMovie() {
   const [name, setName] = useState([]);
   const [img, setImg] = useState("");
   const [comment, setComment] = useState("");
-  const [recommend, setRecommend] = useState("");
+  const [Recommender, setRecommender] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (name === "" || img === "" || comment === "") {
+    if (name === "" || img === "" || comment === "" || Recommender === "") {
       return window.alert("You cannot leave the fields blank.");
     }
     await addDoc(movieCollectionRef, {
       name,
       img,
       comment,
-      recommend,
+      Recommender,
       timestamp: serverTimestamp(),
     })
       .then((response) => {
@@ -26,7 +26,7 @@ export default function AddMovie() {
         setName("");
         setImg("");
         setComment("");
-        setRecommend("");
+        setRecommender("");
         window.alert("Movie Added");
       })
       .catch((error) => {
@@ -62,8 +62,8 @@ export default function AddMovie() {
             placeholder="Your Name, Surname"
             id="Recommended"
             type="text"
-            value={recommend}
-            onChange={(e) => setRecommend(e.target.value)}
+            value={Recommender}
+            onChange={(e) => setRecommender(e.target.value)}
           />
           <br />
           <textarea

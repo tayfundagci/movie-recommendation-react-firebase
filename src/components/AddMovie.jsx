@@ -24,6 +24,7 @@ export default function AddMovie() {
         setName("");
         setImg("");
         setComment("");
+        window.alert("Movie Added");
       })
       .catch((error) => {
         console.log(error.message);

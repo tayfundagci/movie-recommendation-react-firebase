@@ -63,7 +63,7 @@ export default function AddMovie() {
             id="Recommended"
             type="text"
             value={recommend}
-            onChange={(e) => setImg(e.target.value)}
+            onChange={(e) => setRecommend(e.target.value)}
           />
           <br />
           <textarea

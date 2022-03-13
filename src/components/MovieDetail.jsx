@@ -69,6 +69,7 @@ function MovieDetail() {
                     </div>
                   </div>
                 </div>
+                <br />
                 <div
                   className="right ms-5"
                   style={{
@@ -78,6 +79,12 @@ function MovieDetail() {
                   }}
                 >
                   {movie.data.comment}
+                  <br />
+                  <br />
+                  recommended by{" "}
+                  <strong style={{ fontSize: "23px", fontStyle: "italic" }}>
+                    {movie.data.Recommender}
+                  </strong>
                 </div>
               </div>
             )

@@ -7,6 +7,7 @@ export default function AddMovie() {
   const [name, setName] = useState([]);
   const [img, setImg] = useState("");
   const [comment, setComment] = useState("");
+  const [recommend, setRecommend] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -17,6 +18,7 @@ export default function AddMovie() {
       name,
       img,
       comment,
+      recommend,
       timestamp: serverTimestamp(),
     })
       .then((response) => {
@@ -24,6 +26,7 @@ export default function AddMovie() {
         setName("");
         setImg("");
         setComment("");
+        setRecommend("");
         window.alert("Movie Added");
       })
       .catch((error) => {
@@ -51,6 +54,15 @@ export default function AddMovie() {
             id="img"
             type="text"
             value={img}
+            onChange={(e) => setImg(e.target.value)}
+          />
+          <br />
+          <input
+            className="mt-2 ps-2"
+            placeholder="Your Name, Surname"
+            id="Recommended"
+            type="text"
+            value={recommend}
             onChange={(e) => setImg(e.target.value)}
           />
           <br />

@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-/src/lib/init-firebase.js
 
 # testing
 /coverage

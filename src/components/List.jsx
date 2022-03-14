@@ -57,17 +57,25 @@ function List() {
               }}
             >
               <img
-                src={movie.data.img}
+                src={
+                  movie.data.img[0] !== "h" && movie.data.img[1] !== "t"
+                    ? "https://pbs.twimg.com/media/EbwhU1TX0AYHdMb.jpg"
+                    : movie.data.img &&
+                      movie.data.img.includes("www.google.com")
+                    ? "https://pbs.twimg.com/media/EbwhU1TX0AYHdMb.jpg"
+                    : movie.data.img
+                }
                 className="card-img-top"
                 alt={movie.data.name}
                 style={{ height: "350px", borderRadius: "2%" }}
               />
+
               <div className="card-body">
                 <h5
                   className="card-title text-center"
                   style={{ color: colorr }}
                 >
-                  {movie.data.name}
+                  {movie.data.name.length < 3 ? "undefined" : movie.data.name}
                   {/* {JSON.parse(localStorage.getItem("name")) === movie.id && (
                     <button
                       onClick={() => deleteMovie(movie.id)}

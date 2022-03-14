@@ -54,7 +54,14 @@ function MovieDetail() {
                     }}
                   >
                     <img
-                      src={movie.data.img}
+                      src={
+                        movie.data.img[0] !== "h" && movie.data.img[1] !== "t"
+                          ? "https://pbs.twimg.com/media/EbwhU1TX0AYHdMb.jpg"
+                          : movie.data.img &&
+                            movie.data.img.includes("www.google.com")
+                          ? "https://pbs.twimg.com/media/EbwhU1TX0AYHdMb.jpg"
+                          : movie.data.img
+                      }
                       className="card-img-top"
                       alt="..."
                       style={{ height: "350px", borderRadius: "2%" }}
@@ -64,7 +71,9 @@ function MovieDetail() {
                         className="card-title text-center"
                         style={{ color: colorr }}
                       >
-                        {movie.data.name}
+                        {movie.data.name.length < 3
+                          ? "undefined"
+                          : movie.data.name}
                       </h5>
                     </div>
                   </div>
@@ -78,12 +87,16 @@ function MovieDetail() {
                     color: commentt,
                   }}
                 >
-                  {movie.data.comment}
+                  {movie.data.comment.length < 3
+                    ? "thanks for your comment, mr&mrs undefined :)"
+                    : movie.data.comment}
                   <br />
                   <br />
                   recommended by{" "}
                   <strong style={{ fontSize: "23px", fontStyle: "italic" }}>
-                    {movie.data.Recommender}
+                    {movie.data.Recommender.length < 3
+                      ? "undefined"
+                      : movie.data.Recommender}
                   </strong>
                 </div>
               </div>

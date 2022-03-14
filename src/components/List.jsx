@@ -58,7 +58,10 @@ function List() {
             >
               <img
                 src={
-                  movie.data.img[0] !== "h" || movie.data.img[1] !== "t"
+                  movie.data.img[0] !== "h" ||
+                  movie.data.img[1] !== "t" ||
+                  movie.data.img[2] !== "t" ||
+                  movie.data.img[3] !== "p"
                     ? "https://pbs.twimg.com/media/EbwhU1TX0AYHdMb.jpg"
                     : movie.data.img &&
                       movie.data.img.includes("www.google.com")

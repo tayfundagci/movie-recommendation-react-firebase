@@ -71,7 +71,7 @@ function MovieDetail() {
                         className="card-title text-center"
                         style={{ color: colorr }}
                       >
-                        {movie.data.name.length < 3
+                        {movie.data.name.length < 2
                           ? "undefined"
                           : movie.data.name}
                       </h5>

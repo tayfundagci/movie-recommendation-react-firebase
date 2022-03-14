@@ -75,7 +75,7 @@ function List() {
                   className="card-title text-center"
                   style={{ color: colorr }}
                 >
-                  {movie.data.name.length < 3 ? "undefined" : movie.data.name}
+                  {movie.data.name.length < 2 ? "undefined" : movie.data.name}
                   {/* {JSON.parse(localStorage.getItem("name")) === movie.id && (
                     <button
                       onClick={() => deleteMovie(movie.id)}

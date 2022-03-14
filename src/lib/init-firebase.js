@@ -12,9 +12,9 @@ const storagebucket = process.env.REACT_APP_FIREBASE_STORAGEBUCKET;
 const messagingsenderid = process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID;
 const firebaseConfig = {
   apiKey: `${key}`,
-  authDomain: `${authdomain}`,
+  authDomain: "learn-firebase-29d0b.firebaseapp.com",
   projectId: "learn-firebase-29d0b",
-  storageBucket: `${storagebucket}`,
+  storageBucket: "learn-firebase-29d0b.appspot.com",
   messagingSenderId: `${messagingsenderid}`,
   appId: `${appid}`,
 };

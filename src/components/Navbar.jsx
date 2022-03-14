@@ -58,9 +58,6 @@ function Navbar({ search, setSearch }) {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
-                {/* <button className="btn btn-light" type="submit">
-                  Search
-                </button> */}
               </form>
             </div>
           </div>

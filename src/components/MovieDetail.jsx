@@ -43,10 +43,10 @@ function MovieDetail() {
         {movies.map(
           (movie) =>
             movie.id === movie_id && (
-              <div key={movie.id} className="rightleft mt-4">
+              <div key={movie.id} className="rightleft mt-4 border-1">
                 <div className="left">
                   <div
-                    className="card carddd ps-2 pt-2 pe-2 border-2    "
+                    className="card carddd ps-2 pt-2 pe-2 border-2"
                     style={{
                       width: "18rem",
                       color: borderr,
@@ -71,7 +71,7 @@ function MovieDetail() {
                 </div>
                 <br />
                 <div
-                  className="right ms-5"
+                  className="right ms-5 pt-2"
                   style={{
                     fontSize: "25px",
                     textAlign: "left",

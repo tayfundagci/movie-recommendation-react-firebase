@@ -7,14 +7,14 @@ import { getFirestore } from "firebase/firestore";
 const key = process.env.REACT_APP_FIREBASE_KEY;
 const appid = process.env.REACT_APP_FIREBASE_APPID;
 const authdomain = process.env.REACT_APP_FIREBASE_AUTHDOMAIN;
-const projectid = process.env.REACT_APP_FIREBASE_PROJECTID;
+// const projectid = process.env.REACT_APP_FIREBASE_PROJECTID;
 const storagebucket = process.env.REACT_APP_FIREBASE_STORAGEBUCKET;
 const messagingsenderid = process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID;
 const firebaseConfig = {
   apiKey: `${key}`,
-  authDomain: "learn-firebase-29d0b.firebaseapp.com",
+  authDomain: `${authdomain}`,
   projectId: "learn-firebase-29d0b",
-  storageBucket: "learn-firebase-29d0b.appspot.com",
+  storageBucket: `${storagebucket}`,
   messagingSenderId: `${messagingsenderid}`,
   appId: `${appid}`,
 };

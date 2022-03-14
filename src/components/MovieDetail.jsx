@@ -88,7 +88,7 @@ function MovieDetail() {
                   }}
                 >
                   {movie.data.comment.length < 3
-                    ? "thanks for your comment, mr&mrs undefined :)"
+                    ? "thanks for your comment, mr & mrs undefined :)"
                     : movie.data.comment}
                   <br />
                   <br />

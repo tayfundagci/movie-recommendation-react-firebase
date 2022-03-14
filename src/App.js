@@ -10,6 +10,8 @@ import Footer from "./components/Footer";
 function App() {
   const { theme } = useTheme();
 
+  const hr = theme === "dark" && "rgb(220,220,220)";
+
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
@@ -29,6 +31,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      <hr style={{ color: hr }} />
       <Footer />
     </div>
   );

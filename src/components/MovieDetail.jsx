@@ -103,6 +103,7 @@ function MovieDetail() {
             )
         )}
       </div>
+      <br />
     </div>
   );
 }

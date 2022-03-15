@@ -32,6 +32,7 @@ export default function AddMovie() {
         setImg("");
         setComment("");
         setRecommender("");
+        window.location = "/";
       })
       .catch((error) => {
         console.log(error.message);

@@ -57,6 +57,7 @@ export default function AddMovie() {
           <label style={{ color: colorr }}>Movie Image (URL):</label>
           <input
             type="text"
+            placeholder="You should add image url on this area"
             class="form-control"
             value={img}
             id="img"

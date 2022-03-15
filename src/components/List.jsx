@@ -36,7 +36,7 @@ function List() {
     localStorage.removeItem("name");
     const docRef = doc(db, "moviecollection", id);
     deleteDoc(docRef)
-      .then(() => window.alert("Movie Deleted"))
+      .then()
       .catch((error) => console.log(error.message));
   }
 

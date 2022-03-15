@@ -43,43 +43,43 @@ export default function AddMovie() {
     <div className="addmovie">
       <Navbar />
       <form className="container mt-5" onSubmit={handleSubmit}>
-        <div class="form-group">
+        <div className="form-group">
           <label style={{ color: colorr }}>Movie Name:</label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             value={name}
             id="name"
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label style={{ color: colorr }}>Movie Image (URL):</label>
           <input
             type="text"
             placeholder="You should add image url on this area"
-            class="form-control"
+            className="form-control"
             value={img}
             id="img"
             onChange={(e) => setImg(e.target.value)}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label style={{ color: colorr }}>Your Name, Surname:</label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             value={Recommender}
             id="Recommended"
             onChange={(e) => setRecommender(e.target.value)}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <label style={{ color: colorr }}>
             Your thoughts about movie (Dizi/Film hakkındaki düşünceleriniz):
           </label>
           <textarea
-            class="form-control"
+            className="form-control"
             id="comment"
             value={comment}
             rows="3"

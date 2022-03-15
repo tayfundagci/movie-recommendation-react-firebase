@@ -27,7 +27,7 @@ export default function AddMovie() {
       timestamp: serverTimestamp(),
     })
       .then((response) => {
-        // localStorage.setItem("name", JSON.stringify(response.id));
+        localStorage.setItem("name", JSON.stringify(response.id));
         setName("");
         setImg("");
         setComment("");

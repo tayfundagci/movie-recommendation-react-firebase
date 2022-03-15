@@ -2,10 +2,9 @@ import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
 import { useState, useEffect } from "react";
-import { onSnapshot, orderBy, query } from "firebase/firestore";
-// import { onSnapshot, orderBy, query, deleteDoc, doc } from "firebase/firestore";
+import { onSnapshot, orderBy, query, deleteDoc, doc } from "firebase/firestore";
 import { movieCollectionRef } from "../lib/firestore.collections";
-// import { db } from "../lib/init-firebase";
+import { db } from "../lib/init-firebase";
 
 import { useTheme } from "../context/ThemeContext";
 
@@ -33,13 +32,13 @@ function List() {
     };
   }, []);
 
-  // function deleteMovie(id) {
-  //   localStorage.clear();
-  //   const docRef = doc(db, "moviecollection", id);
-  //   deleteDoc(docRef)
-  //     .then(() => window.alert("Movie Deleted"))
-  //     .catch((error) => console.log(error.message));
-  // }
+  function deleteMovie(id) {
+    localStorage.clear();
+    const docRef = doc(db, "moviecollection", id);
+    deleteDoc(docRef)
+      .then(() => window.alert("Movie Deleted"))
+      .catch((error) => console.log(error.message));
+  }
 
   return (
     <div className="listt">
@@ -79,7 +78,7 @@ function List() {
                   style={{ color: colorr }}
                 >
                   {movie.data.name.length < 2 ? "undefined" : movie.data.name}
-                  {/* {JSON.parse(localStorage.getItem("name")) === movie.id && (
+                  {JSON.parse(localStorage.getItem("name")) === movie.id && (
                     <button
                       onClick={() => deleteMovie(movie.id)}
                       style={{
@@ -90,7 +89,7 @@ function List() {
                     >
                       X
                     </button>
-                  )} */}
+                  )}
                 </h5>
 
                 <Link
